@@ -9,7 +9,9 @@ module.exports = function override(config, env) {
     https: require.resolve('https-browserify'),
     os: require.resolve('os-browserify/browser'),
     url: require.resolve('url'),
-    process: require.resolve('process/browser'),  // Ensure process is included
+    process: require.resolve('process/browser'),
+    buffer: require.resolve('buffer'),
+    vm: require.resolve('vm-browserify'),
   };
   config.plugins = (config.plugins || []).concat([
     new webpack.ProvidePlugin({
